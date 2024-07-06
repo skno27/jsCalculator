@@ -49,8 +49,12 @@ body {
   background-color: darkgray;
 }
 
+.btn:hover {
+  background-color: darkgray;
+}
+
 .btn:active {
-  background-color: slategray;
+  background-color: rgb(81, 84, 86);
 }
 
 .main-btns {
@@ -65,7 +69,6 @@ body {
 .equal-btn {
   flex: 1;
   margin-top: 10px;
-  margin-left: 12px;
+  margin-left: 20px;
   border-radius: 10px;
-  width: 400px;
 }
