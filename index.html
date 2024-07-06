@@ -5,10 +5,180 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="styles.css" />
     <title>Javascript Calculator</title>
   </head>
+  <!-- begin body -->
   <body>
-    <div></div>
-    <div></div>
+    <div
+      id="intro"
+      class="text-center">
+      <h1 class="mt-md-4 mb-md-4">JS Calculator</h1>
+    </div>
+    <div
+      id="calculator"
+      class="mt-md-4">
+      <div
+        class="cell"
+        id="display">
+        <span class="result-text"></span>
+      </div>
+      <!-- operator buttons -->
+      <div
+        class="row gray"
+        id="operators">
+        <button
+          id="add"
+          class="btn cell"
+          onclick="pressOperator('+')">
+          +
+        </button>
+        <button
+          id="subtract"
+          class="btn cell"
+          onclick="pressOperator('-')">
+          -
+        </button>
+        <button
+          id="multiply"
+          class="btn cell"
+          onclick="pressOperator('x')">
+          x
+        </button>
+        <button
+          id="divide"
+          class="btn cell"
+          onclick="pressOperator('/')">
+          /
+        </button>
+      </div>
+      <!-- 7-9 -->
+      <div
+        id="lower"
+        class="main-btns">
+        <div id="numbers">
+          <div
+            class="row"
+            id="first">
+            <button
+              id="seven"
+              class="btn cell"
+              onclick="pressNumber(7)">
+              7
+            </button>
+            <button
+              id="eight"
+              class="btn cell"
+              onclick="pressNumber(8)">
+              8
+            </button>
+            <button
+              id="nine"
+              class="btn cell"
+              onclick="pressNumber(9)">
+              9
+            </button>
+          </div>
+          <!-- 4-6 -->
+          <div
+            class="row"
+            id="second">
+            <button
+              id="4"
+              class="btn cell"
+              onclick="pressNumber(4)">
+              4
+            </button>
+            <button
+              id="five"
+              class="btn cell"
+              onclick="pressNumber(5)">
+              5
+            </button>
+            <button
+              id="six"
+              class="btn cell"
+              onclick="pressNumber(6)">
+              6
+            </button>
+          </div>
+          <!-- 1-3 -->
+          <div
+            class="row"
+            id="third">
+            <button
+              id="one"
+              class="btn cell"
+              onclick="pressNumber(1)">
+              1
+            </button>
+            <button
+              id="two"
+              class="btn cell"
+              onclick="pressNumber(2)">
+              2
+            </button>
+            <button
+              id="three"
+              class="btn cell"
+              onclick="pressNumber(3)">
+              3
+            </button>
+          </div>
+          <!-- 0-.-c -->
+          <div
+            class="row"
+            id="last">
+            <button
+              id="zero"
+              class="btn cell"
+              onclick="pressNumber(0)">
+              0
+            </button>
+            <button
+              id="decimal"
+              class="btn cell"
+              onclick="pressNumber('.')">
+              .
+            </button>
+            <button
+              id="clear"
+              class="btn cell"
+              onclick="pressOperator('c')">
+              clear
+            </button>
+          </div>
+        </div>
+
+        <button
+          id="equals"
+          class="equal-btn"
+          onclick="pressOperator('=')">
+          =
+        </button>
+      </div>
+    </div>
+
+    <!-- babel and jquery scripts -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
   </body>
 </html>
