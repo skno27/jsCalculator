@@ -1,6 +1,6 @@
 const resultText = document.getElementsByClassName("result-text")[0];
 
-let storedValue = 0;
+let storedValue = null;
 let operator = null;
 
 function pressNumber(number) {
@@ -8,6 +8,8 @@ function pressNumber(number) {
     if (resultText.innerHTML.length === 0 || resultText.innerHTML.includes("."))
       return;
   }
+  if (resultText.innerHTML === "0")
+    return (resultText.innerHTML = number.toString());
   resultText.innerHTML += number.toString();
 }
 
@@ -56,5 +58,5 @@ function pressOperator(operation) {
     storedValue = number;
   }
 
-  resultText.innerHTML = "";
+  resultText.innerHTML = "0";
 }
